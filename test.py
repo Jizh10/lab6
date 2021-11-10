@@ -10,7 +10,7 @@ rowShifter = Shifter(dataPins[0], latchPins[0], clockPins[0])
 colShifter = Shifter(dataPins[1], latchPins[1], clockPins[1])
 
 rowByteVal = 0b11000000
-colByteVal = 0b01111111
+colByteVal = 0b01111110
 
 try:  
   while True:
