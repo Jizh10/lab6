@@ -12,7 +12,7 @@ byteVal = 0b10000000
 
 while True:
   rowShifter.shiftByte(byteVal)
-  colShifter.shiftByte(byteVal)
+  colShifter.shiftByte(byteVal<<1)
   time.sleep(0.4)
 
 
