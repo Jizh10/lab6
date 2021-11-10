@@ -12,8 +12,12 @@ colShifter = Shifter(dataPins[1], latchPins[1], clockPins[1])
 rowByteVal = 0b11000000
 colByteVal = 0b01111110
 
+pattern = [0b00111100, 0b01000010, 0b10100101, 0b10000001, 
+0b10100101, 0b10011001, 0b01000010, 0b00111100]
+
 try:  
   while True:
+    
     rowShifter.shiftByte(rowByteVal)
     colShifter.shiftByte(colByteVal)
     time.sleep(0.4)
