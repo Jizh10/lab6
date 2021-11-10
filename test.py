@@ -1,6 +1,6 @@
 import time
 from shifter import Shifter
-from RPi.GPIO import GPIO
+import RPi.GPIO as GPIO
 
 dataPins = [17, 27]
 latchPins = [5, 6]
