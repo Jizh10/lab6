@@ -1,4 +1,5 @@
 import time
+import RPi.GPIO as GPIO
 from led8x8 import LED8X8
 
 dataPins = [17, 27]
@@ -11,7 +12,12 @@ pattern = [0b00111100, 0b01000010, 0b10100101, 0b10000001,
 
 led = LED8X8(dataPins, latchPins, clockPins, name)
 
-while True:
-  led.diplay(pattern)
-  time.sleep(0.4)
+try:
+  while True:
+    led.diplay(pattern)
+    time.sleep(0.4)
+except KeyboardInterrupt:
+  print('out')
+finally:
+  GPIO.clean
 
