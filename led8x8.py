@@ -18,5 +18,5 @@ class LED8x8(multiprocessing.Process):
   def display(self, pattern):
     for i in range(8):
       self.rowShifter.shiftByte(1<<i) 
-      self.colShifter.shiftByte(pattern[i])
+      self.colShifter.shiftByte(~(pattern[i]))
     
