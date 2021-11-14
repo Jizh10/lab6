@@ -17,7 +17,7 @@ class LED8x8(multiprocessing.Process):
       while True:
         self.display(self.pattern)
         print(self.pattern[:])
-        time.sleep(1)
+        time.sleep(0.1)
     except KeyboardInterrupt:
       print('exiting process')
     finally:  
