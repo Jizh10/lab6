@@ -33,7 +33,7 @@ try:
     elif ypos > 7:
       ypos = 0
     boardState[xpos] = 1 << ypos
-    time.sleep(1)
+    time.sleep(0.1)
 except KeyboardInterrupt:
   print('exiting random walk')
 finally:
