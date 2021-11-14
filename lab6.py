@@ -21,8 +21,8 @@ led.start()
 try:
   while True:
     boardState[xpos] = 0
-    xpos = xpos + random.randint(2) - 1
-    ypos = ypos + random.randint(2) - 1
+    xpos = xpos + random.randint(3) - 1
+    ypos = ypos + random.randint(3) - 1
     if xpos < 0:
       xpos = 7
     elif xpos > 7:
