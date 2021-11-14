@@ -10,7 +10,8 @@ name = "led8x8"
 pattern = [0b00111100, 0b01000010, 0b10100101, 0b10000001, 
 0b10100101, 0b10011001, 0b01000010, 0b00111100]
 
-led = LED8x8(dataPins, latchPins, clockPins, name)
+
+led = LED8x8(dataPins, latchPins, clockPins, name, pattern)
 
 try:
   while True:
