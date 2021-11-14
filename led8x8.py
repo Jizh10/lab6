@@ -27,6 +27,6 @@ class LED8x8(multiprocessing.Process):
     for i in range(8):
       self.rowShifter.shiftByte(1<<(7-i)) 
       self.colShifter.shiftByte(~(pattern[i]))
-      time.sleep(0.005)
+      time.sleep(0.001)
       
     
