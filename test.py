@@ -2,11 +2,11 @@ import time
 from shifter import Shifter
 import RPi.GPIO as GPIO
 
-dataPins = 17
+dataPin = 17
 latchPin = 5
 clockPin = 13
 
-shifter = Shifter(dataPins[0], latchPin, clockPin)
+shifter = Shifter(dataPin, latchPin, clockPin)
 
 
 rowByteVal = 0b10000000
