@@ -20,14 +20,12 @@ class LED8x8(multiprocessing.Process):
       print('exiting process')
     finally:  
       print("Process ended")
-  
-  
 
   def display(self, pattern):
     for i in range(8):
-      self.rowShifter.shiftByteNoLatch(1<<(7-i)) 
-      self.colShifter.shiftByteNoLatch(~(pattern[i]))
-      self.rowShifter.pingLatch()
+      self.rowShifter.shiftByte(1<<(7-i)) 
+      self.colShifter.shiftByte(~(pattern[i]))
       time.sleep(0.001)
+      self.colShifter.shiftByte(~0)
       
     
