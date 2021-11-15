@@ -17,8 +17,9 @@ pattern = [0b00111100, 0b01000010, 0b10100101, 0b10000001,
 
 try:  
   while True:
-    rowShifter.shiftByte(rowByteVal)
-    colShifter.shiftByte(colByteVal)
+    rowShifter.shiftByteNoLatch(rowByteVal)
+    colShifter.shiftByteNoLatch(colByteVal)
+    rowShifter.pingLatch()
     time.sleep(0.4)
 except KeyboardInterrupt:
   print('out')
