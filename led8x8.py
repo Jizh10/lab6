@@ -8,8 +8,8 @@ class LED8x8(multiprocessing.Process):
   def __init__(self, data, latch, clock, process_name, pattern):
     multiprocessing.Process.__init__(self, name=process_name)
     self.pattern = pattern
-    self.rowShifter = Shifter(data[0], latch[0], clock[0])
-    self.colShifter = Shifter(data[1], latch[1], clock[1])
+    self.rowShifter = Shifter(data[0], latch, clock)
+    self.colShifter = Shifter(data[1], latch, clock)
 
   def run(self):
     print("Process started")
