@@ -23,8 +23,8 @@ class LED8x8(multiprocessing.Process):
   def display(self, pattern):
     for i in range(8):
       byteVal = 1<<(7-i)
-      for i in range(8):
-        if pattern & (1<<(7-i)):
+      for j in range(8):
+        if pattern[i] & (1<<(7-j)):
           byteVal = byteVal<<1
         else:
           byteVal = (byteVal<<1)+1
