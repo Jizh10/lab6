@@ -14,7 +14,7 @@ colByteVal = 0b01111111
 byteVal = rowByteVal
 
 for i in range(8):
-  if colByteVal & (1<<i):
+  if colByteVal & (1<<(7-i)):
     byteVal = (byteVal << 1) + 1
   else:
     byteVal = byteVal << 1
