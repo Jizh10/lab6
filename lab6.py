@@ -5,9 +5,9 @@ import RPi.GPIO as GPIO
 from led8x8 import LED8x8
 
 # define GPIO pins for data, latch, and clock
-dataPins = [17, 27]
-latchPins = [5, 6]
-clockPins = [13, 19]
+dataPins = 17
+latchPins = 5
+clockPins = 13
 
 # init variables 
 name = "led8x8"
