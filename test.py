@@ -4,10 +4,10 @@ import RPi.GPIO as GPIO
 
 dataPins = [17, 27]
 latchPin = 5
-clockPins = [13, 19]
+clockPin = 13
 
-rowShifter = Shifter(dataPins[0], latchPin, clockPins[0])
-colShifter = Shifter(dataPins[1], latchPin, clockPins[1])
+rowShifter = Shifter(dataPins[0], latchPin, clockPin)
+colShifter = Shifter(dataPins[1], latchPin, clockPin)
 
 rowByteVal = 0b10000000
 colByteVal = 0b01111111
