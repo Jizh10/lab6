@@ -11,11 +11,13 @@ shifter = Shifter(dataPin, latchPin, clockPin)
 
 rowByteVal = 0b10000000
 colByteVal = 0b01111111
-byteVal = 0
+byteVal = rowByteVal
 
 for i in range(8):
   if colByteVal & (1<<i):
-    byteVal = (rowByteVal << 1) + 1
+    byteVal = (byteVal << 1) + 1
+  else:
+    byteVal = byteVal << 1
 
 print(bin(byteVal))
 
