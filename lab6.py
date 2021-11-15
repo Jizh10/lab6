@@ -4,11 +4,13 @@ import multiprocessing
 import RPi.GPIO as GPIO
 from led8x8 import LED8x8
 
+# define GPIO pins for data, latch, and clock
 dataPins = [17, 27]
 latchPins = [5, 6]
 clockPins = [13, 19]
-name = "led8x8"
 
+# init variables 
+name = "led8x8"
 xpos = 0
 ypos = 0
 boardState = multiprocessing.Array('i', 8)
@@ -24,14 +26,14 @@ try:
     xpos = xpos + random.randint(3) - 1
     ypos = ypos + random.randint(3) - 1
     if xpos < 0:
-      xpos = 7
-    elif xpos > 7:
       xpos = 0
+    elif xpos > 7:
+      xpos = 7
     
     if ypos < 0:
-      ypos = 7
-    elif ypos > 7:
       ypos = 0
+    elif ypos > 7:
+      ypos = 7
     boardState[xpos] = 1 << ypos
     time.sleep(0.1)
 except KeyboardInterrupt:

@@ -22,4 +22,13 @@ class Shifter(object):
       GPIO.output(self.dataPin, byteVal & (1<<i))
       self.ping(self.clockPin)
     self.ping(self.latchPin)
-
+  
+  def shiftByteNoLatch(self, byteVal):
+    for i in range(8):
+      GPIO.output(self.dataPin, byteVal & (1<<i))
+      self.ping(self.clockPin)
+  
+  def pingLatch(self):
+    GPIO.output(self.latchPin,1)
+    time.sleep(0)
+    GPIO.output(self.latchPin,0)
